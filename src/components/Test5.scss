@@ -1,0 +1,33 @@
+$red:red;
+$pink:pink;
+$green:green;
+$blue:blue;
+
+@mixin myMixin($size) {
+    $width : 100px;
+        @if $size % 2 ==0 {
+            $width: $withd + 50
+        }@else if $size % 3 == 0 {
+            $width: $withd + 100
+        }@else {
+            $width: $withd
+        }
+    width: $width;
+    height: 50px * 2 ;
+    transform:  0.4s;
+    &:hover {
+        transform:scale(1.2) rotate(15deg)
+    }
+}
+
+.wrap {
+    width: 600px;
+    display: flex;
+    margin: 20px;
+    .box{
+        &.red{background: $red; @include myMixin(1)}
+        &.pink{background: $pink; @include myMixin(2)}
+        &.green{background: $green; @include myMixin(3)}
+        &.blue{background: $blue; @include myMixin(4)}
+    }    
+}

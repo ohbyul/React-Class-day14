@@ -1,0 +1,26 @@
+.box{
+    width: 100px;
+    height: 150px;
+    border: 2px solid blue;
+    margin: 15px;
+    background: green;
+}
+.size{
+    width: 80px;
+    height: 120px;
+    margin: 10px;
+}
+
+
+.bg{
+    background: greenyellow;
+}
+
+
+/* module css 안에 일반 클래스 처럼 사용가능하게 */
+:global .mybox{
+    background: hotpink;width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 15px;
+}
